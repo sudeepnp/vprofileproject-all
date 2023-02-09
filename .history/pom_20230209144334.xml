@@ -8,9 +8,9 @@
     <name>Visualpathit VProfile Webapp</name>
     <url>http://maven.apache.org</url>
     <properties>
-        <spring.version>6.0.55</spring.version>
+        <spring.version>4.0.4</spring.version>
         <spring-security.version>6.0.1</spring-security.version>
-        <spring-data-jpa.version>3.0.1</spring-data-jpa.version>
+        <spring-data-jpa.version>6.0.4s</spring-data-jpa.version>
         <hibernate.version>4.3.11.Final</hibernate.version>
         <hibernate-validator.version>8.0.0.Final</hibernate-validator.version>
         <mysql-connector.version>8.0.30</mysql-connector.version>
@@ -134,14 +134,9 @@
             </plugin>
 		<!-- CODE COVERAGE -->
 		    <plugin>
-                     <groupId>org.apache.maven.plugins</groupId>
-                     <artifactId>maven-war-plugin</artifactId>
-                     <version>3.2.2</version>
-                    </plugin>
- 		    <plugin>
- 		        <groupId>org.jacoco</groupId>
- 		        <artifactId>jacoco-maven-plugin</artifactId>
-			<version>0.8.4</version>
+		        <groupId>org.jacoco</groupId>
+		        <artifactId>jacoco-maven-plugin</artifactId>
+		        <version>0.7.2.201409121644</version>
 		        <executions>
 		            <execution>
 		                <id>jacoco-initialize</id>
