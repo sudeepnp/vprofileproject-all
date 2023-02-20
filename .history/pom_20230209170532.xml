@@ -19,7 +19,7 @@
         <junit.version>3.8.1 </junit.version>
         <logback.version>1.2.3</logback.version>
         <maven.compiler.source>1.11</maven.compiler.source>
-        <maven.compiler.target>1.11</maven.compiler.target>
+        <maven.compiler.target>1.11 </maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -123,16 +123,8 @@
             </plugin>
 		<!-- CODE COVERAGE -->
         
- <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>2.19.1</version>
-    <configuration>
-        <testFailureIgnore>true</testFailureIgnore>
-    </configuration>
-</plugin>
 
-		     <plugin>
+ <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-compiler-plugin</artifactId>
       <version>3.8.0</version>
@@ -144,11 +136,7 @@
         <executable>${JAVA_HOME}/bin/javac</executable>
       </configuration>
     </plugin>
-    
-        
-<plugin>
-
- <groupId>org.jacoco</groupId>
+ 		        <groupId>org.jacoco</groupId>
  		        <artifactId>jacoco-maven-plugin</artifactId>
 			<version>0.8.4</version>
 		        <executions>
@@ -167,9 +155,7 @@
 		                </goals>
 		            </execution>
 		        </executions>
-</plugin>
- 		       
-		
+		</plugin>
         </plugins>
     </build>
 	<repositories>
