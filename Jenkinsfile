@@ -25,23 +25,7 @@ pipeline {
         stage('BUILD'){
             steps {
                 sh 'mvn -s settings.xml -DskipTests install '
-                sh ' java -version'
-                sh '  mvn  clean install -DskipTests'
             }
-            post {
-                success {
-                     echo ' begin archiving.... '
-                        archiveArtifacts artifacts: '**/target/*.war'                }
-            }
-        }
-
-
-
-
-stage('UNIT Test') {
-           steps {
-            sh 'mvn test'
-           }
         }
         
     }
